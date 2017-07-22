@@ -4,6 +4,7 @@ import urllib
 import json
 import os
 
+from random import randint
 from flask import Flask
 from flask import request
 from flask import make_response
@@ -36,7 +37,8 @@ def makeWebhookResult(req):
 
     cost = {'Europe':100, 'North America':200, 'South America':300, 'Asia':400, 'Africa':500}
 
-    speech = "The cost of shipping to " + zone + " is " + str(cost[zone]) + " euros."
+    #speech = "The cost of shipping to " + zone + " is " + str(cost[zone]) + " euros."
+    speech = "Your balance is " + str(randint(100,200)) + " rupees."
 
     print("Response:")
     print(speech)
